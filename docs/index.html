@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alessandro Dell'Acqua - CV</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            line-height: 1.8;
+            color: #000000;
+            background-color: rgb(243, 242, 238);
+        }
+        .gray {
+            color: rgb(88, 88, 88);
+        }
+
+        header {
+            /*background-color: rgb(11, 102, 193);*/
+            background-color: rgb(54, 33, 213);
+            border-radius: 10px;
+            padding: 1em;
+            margin: 1em;
+            box-shadow: 0 2px 5px rgba(97, 97, 97, 0.3);
+            text-align: center;
+            margin-bottom: -1em;
+        }
+
+        header h1 {
+            color: #ffffff;
+            font-size: 2em;
+        }
+
+        header p {
+            color: #ffffff;
+        }
+
+        section {
+            background-color: #cee1ff;
+            border-radius: 10px;
+            padding: 1em;
+            margin: 1em;
+            box-shadow: 0 2px 5px rgba(97, 97, 97, 0.3);
+            line-height: 1.6;
+        }
+
+        section h2 {
+            border-bottom: 1.3px solid rgba(11,102,194);
+            padding-bottom: 0.1em;
+            margin-bottom: 0.1em;
+            margin-left: 1.5em;
+            color: #000000;
+            border-bottom: none;
+        }
+        .titles-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1em;
+            border-bottom: none;
+        }
+
+        .right-title {
+            color: #000000;
+            #education, #experience
+            margin-right: 1.5em;
+            box-shadow: none;
+            border-bottom: none;
+            background-color: #cee1ff;
+            border-radius: 10px;
+        }
+        .education-box {
+            background-color: rgb(188, 213, 252);
+            border-radius: 10px;
+            margin-bottom: 1em;
+            padding: 1em;
+            box-shadow: 0 2px 5px rgba(56, 56, 56, 0.5);
+        }
+        .experience-box {
+            background-color: rgb(188, 213, 252);
+            border-radius: 10px;
+            margin-bottom: 1em;
+            padding: 1em;
+            box-shadow: 0 2px 5px rgba(56, 56, 56, 0.5);
+        }
+        .box-icon {
+            width: 80px;
+            height: auto;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        .education-box, .experience-box {
+            display: flex;
+            align-items: center;
+        }
+
+        .box-content-with-skills {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: flex-end;
+            max-width: calc(100% - 3em);
+            margin: 0 auto;
+            margin-right: 10px;
+            background-color: transparent;
+        }
+
+        .skills-box {
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 10px;
+            padding: 0.5em;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            margin: 5px;
+            flex-basis: calc(33.333% - 10px);
+            text-align: center;
+            white-space: nowrap;
+        }
+        .skills-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            text-align: center;
+            margin-top: 10px;
+            /*background-color: rgba(206, 225, 255, 0.4);*/
+            background-color: #cee1ff;
+            box-shadow: 0 2px 5px rgba(97, 97, 97, 0.3);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .skills-table td, .skills-table th {
+            padding: 10px;
+        }
+
+        .skills-table td:first-child {
+            border-bottom-left-radius: 10px;
+        }
+
+        .skills-table td:last-child {
+            border-bottom-right-radius: 10px;
+        }
+
+        .skills-table th:first-child {
+            border-top-left-radius: 10px;
+        }
+
+        .skills-table th:last-child {
+            border-top-right-radius: 10px;
+        }
+
+        .box-text-content {
+            flex-grow: 1;
+        }
+
+        .box-section-bottom {
+            background-color: rgba(206, 225, 255, 0.4);
+            border-radius: 10px;
+            margin-bottom: 1em;
+            padding: 1em;
+            box-shadow: 0 2px 5px rgba(97, 97, 97, 0.3);
+        }
+        .skill-bottom-container {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: flex-start;
+        }
+        .skill-bottom {
+            flex: 0 0 calc(25% - 10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 0.5em;
+            box-shadow: 0 2px 5px rgba(97, 97, 97, 0.3);
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        #contact {
+            background-color: #cee1ff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        #profile {
+            display: flex;
+            align-items: flex-start;
+            gap: 2em;
+            background-color: rgba(206, 225, 255, 0);
+            box-shadow: none;
+            margin-bottom: -1em;
+            margin-left: none;
+        }
+
+        #profile .profile-image {
+            flex: 0 0 280px;
+            height: 350px;
+            background-color: rgb(54, 33, 213);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(97, 97, 97, 0.3);
+        }
+
+        #profile .profile-text {
+            flex-grow: 1;
+            background-color: #cee1ff;
+            padding: 1.5em;
+            height: 280px;
+            border-radius: 10px;
+            font-size: 1.46em;
+            line-height: 1;
+            box-shadow: 0 2px 5px rgba(97, 97, 97, 0.3);
+        }
+
+        #profile img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: rgb(54, 33, 213);
+            color: #cee1ff;
+            border-radius: 10px;
+            padding: 1em;
+            margin: 1em;
+            box-shadow: 0 2px 5px rgba(97, 97, 97, 0.3);
+            text-align: center;
+            margin-top: 1em;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Alessandro Dell'Acqua</h1>
+        <p>High School student</p>
+    </header>
+
+    <section id="profile">
+        <div class="profile-image">
+            <img src="MediaCV/selfie.jpeg" alt="Alessandro Dell'Acqua">
+        </div>
+        <div class="profile-text">
+            <p>I'm an Italian nineteen-year-old student.</p>
+            <p>I am attending the first year of physics at King's College London.</p>
+            <p>I'm creative, dynamic, and always ready to get involved and give my best.</p>
+            <p>I love physics and math, I'm curious, and I'm really interested in technology, and the next steps for humankind in research.</p>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="titles-container">
+            <h2>Education</h2>
+            <h2 class="right-title">Skills</h2>
+        </div>
+        <div class="education-box">
+            <img src="MediaCV/KingSCollege.svg" alt="Education Icon" class="box-icon">
+            <div class="box-content">
+                <strong>KING'S COLLEGE LONDON - Undregraduate studies</strong>
+                <br>
+                2024 - 2027 | Bachelor of Science in Physics
+                </br>
+            </div>
+        </div>
+        </div>
+        <div class="education-box">
+            <img src="MediaCV/Tirinnanzi.svg" alt="Education Icon" class="box-icon">
+            <div class="box-content">
+                <strong>SCIENTIFIC LYCEUM - High School</strong>
+                <br>
+                2019 - 2024 | Graduated with 
+                </br>
+            </div>
+        </div>
+        <div class="education-box">
+            <img src="MediaCV/IELTS.svg" alt="Education Icon" class="box-icon">
+            <div class="box-content">
+                <strong>IELTS Academic Certificate</strong>
+                <br>
+                2024 | Overall Level 7.5 (C1 on the CEFR english level scale)
+                </br>
+            </div>
+            <div class="skills-container">
+                <table class="skills-table">
+                    <tr>
+                        <th>Listening</th>
+                        <th>Reading</th>
+                        <th>Writing</th>
+                        <th>Speaking</th>
+                        <th>Overall</th>
+                    </tr>
+                    <tr>
+                        <td>8.5</td>
+                        <td>8.5</td>
+                        <td>6.5</td>
+                        <td>6.0</td>
+                        <td>7.5</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="education-box">
+            <img src="MediaCV/Politecnico.svg" alt="Education Icon" class="box-icon">
+            <div class="box-content">
+                <strong>POLITECNICO MILANO - SUMMER TECH CAMP</strong>
+                <br>
+                2022 | Python coding course (Codes and videogame creation)
+                </br>
+            </div>
+            <div class="skills-container">
+                <div class="skills-box">
+                    Python
+                </div>
+            </div>
+        </div>
+        <div class="education-box">
+            <img src="MediaCV/Zuoz.svg" alt="Education Icon" class="box-icon">
+            <div class="box-content">
+                <strong>SUMMER CAMP ZUOZ (ST.MORITZ, SWITZERLAND)</strong>
+                <br>
+                2018 | Advanced English course
+                </br>
+            </div>
+            <div class="skills-container">
+                <div class="skills-box">
+                    English
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="titles-container">
+            <h2>Experience</h2>
+            <h2 class="right-title">Skills</h2>
+        </div>
+        <div class="experience-box">
+            <img src="MediaCV/PoliticsHub.svg" alt="Experience Icon" class="box-icon">
+            <div class="box-content">
+                <strong>POLITICS HUB - SOCIAL MEDIA MANAGER</strong>
+                <br>
+                <span class="gray">September 2021 - Now</span>
+                </br>
+                Social media manager at PoliticsHub, an association of young students having the mission to get the youngest ready for politics.
+            </div>
+            <div class="skills-container">
+                <div class="skills-box">
+                Leadership
+            </div>
+                <div class="skills-box">
+                    Team working
+                </div>
+                <div class="skills-box">
+                    Social media Management
+                </div>
+                <div class="skills-box">
+                    Graphic design
+                </div>
+                <div class="skills-box">
+                    Photoshop & Canva
+                </div>
+                <div class="skills-box">
+                    Video editing
+                </div>
+            </div>
+        </div>
+        <div class="experience-box">
+            <img src="MediaCV/CERN.svg" alt="Experience Icon" class="box-icon">
+            <div class="box-content">
+                <strong>CERN - INTERNSHIP</strong>
+                <br>
+                <span class="gray">July 2023 - August 2023</span>
+                </br>
+                Internship at CERN of Geneva, in the CMS department. Supervised by the Bicocca University of Milan professors.
+            </div>
+            <div class="skills-container">
+                <div class="skills-box">
+                    173 - Level B1 Advenced
+                </div>
+                <div class="skills-box">
+                    173 - Level B1 Advenced
+                </div>
+            </div>
+        </div>
+        <div class="experience-box">
+            <img src="MediaCV/Dorbit.svg" alt="Experience Icon" class="box-icon">
+            <div class="box-content">
+                <strong>D-ORBIT S.P.A. - STAGE</strong>
+                <br>
+                <span class="gray">June 2023 - July 2023</span>
+                </br>
+                Stage in Research and Development department at D-Orbit (Italian Unicorn Start-Up in Space Economy).
+            </div>
+        </div>
+        <div class="experience-box">
+            <img src="MediaCV/Abmedica.svg" alt="Experience Icon" class="box-icon">
+            <div class="box-content">
+                <strong>ABMEDICA S.P.A. - STAGE</strong>
+                <br>
+                <span class="gray">August 2022 - September 2022</span>
+                </br>
+                Stage at abMedica s.p.a. (Health company Italian leader in medical devices - Intuitive Robotics) Cerro Maggiore (Milan).
+            </div>
+        </div>
+    </section>
+
+    <section id="box-section-bottom">
+        <h2>Skills</h2>
+        <div class="skill-bottom-container">
+            <div class="skill-bottom">
+                Python
+            </div>
+            <div class="skill-bottom">
+                LCXD
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>
+            Email: <a href="mailto:dellacqua.ale01@gmail.com">dellacqua.ale01@gmail.com</a><br>
+            Phone: +39 3511560115<br>
+            LinkedIn: <a href="https://www.linkedin.com/in/alessandro-dell%E2%80%99acqua-831701225">https://www.linkedin.com/in/alessandro-dell%E2%80%99acqua-831701225</a>
+        </p>
+    </section>
+
+    <footer>
+        <p>
+            &copy; Alessandro Dell'Acqua Curriculum Vitae
+        </p>
+    </footer>
+</body>
+</html>
