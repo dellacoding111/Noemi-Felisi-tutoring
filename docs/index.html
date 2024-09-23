@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - CV</title>
+    <title>Noemi Felisi - CV</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -89,84 +89,147 @@
             font-size: 1.5em;
             color: rgba(11,102,194,1);
         }
+        .languages-box {
+            display: flex;
+            flex-direction: column;
+        }
+        .languages-title {
+            color: black;
+            margin-bottom: 15px;
+        }
+        .languages {
+            display: flex;
+            justify-content: space-between;
+        }
+        .language {
+            width: calc(33.33% - 10px);
+            text-align: center;
+        }
+        .language img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 5px;
+            border: 5px solid #fff;
+            box-sizing: border-box;
+        }
+        .language-level {
+            margin-top: 10px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="box name-box">
-            <h1>Your Name</h1>
+            <h1>Noemi Felisi</h1>
         </div>
         
         <div class="box main-content">
             <div class="photo">
-                <img src="/api/placeholder/300/300" alt="Your Photo">
+                <img src="/api/placeholder/300/300" alt="Noemi Felisi">
             </div>
             <div class="description">
                 <h2 class="section-title">About Me</h2>
-                <p>Write a brief description about yourself here.</p>
+                <p>I am a dynamic and enthusiastic 25-year-old Italian woman. Alongside my medical work, I am passionate about education and childcare. I love helping children discover their abilities and reach their full potential!</p>
             </div>
         </div>
         
         <div class="box open-to-work">
             <h2 class="section-title">Open to Work</h2>
-            <p>Describe the type of work you're looking for, your career goals, and any specific industries or roles you're interested in. For example: "Seeking entry-level positions in physics research or data analysis, particularly in the fields of astrophysics or quantum computing. Eager to apply my strong analytical skills and passion for scientific discovery in a challenging and innovative environment."</p>
+            <ul>
+                <li>Babysitting</li>
+                <li>Private tutoring for primary, middle, and high school students in Biology, Chemistry, Natural Sciences, Maths, Italian, Ancient Greek, Latin, French.</li>
+            </ul>
         </div>
         
         <div class="box experiences">
             <h2 class="section-title">Professional Experience</h2>
             <div class="experience">
-                <img src="/api/placeholder/50/50" alt="Company Logo" class="experience-logo">
+                <img src="/api/placeholder/50/50" alt="Tutor Logo" class="experience-logo">
                 <div class="experience-content">
-                    <h3 class="experience-title">Job Title</h3>
-                    <p class="experience-description">Company Name | Start Date - End Date</p>
+                    <h3 class="experience-title">Private Tutor</h3>
+                    <p class="experience-description">Families, Milan and Paris | 2017 - 2024</p>
                     <ul>
-                        <li>Responsibility or achievement</li>
-                        <li>Responsibility or achievement</li>
-                        <li>Responsibility or achievement</li>
+                        <li>Followed more than 20 students, ranging from primary to high school.</li>
+                        <li>Personalized approach focusing on building strong foundational knowledge.</li>
+                        <li>Boosted students' confidence and fostered a love for independent learning.</li>
+                        <li>Helped students gain deeper understanding and develop effective study methods.</li>
                     </ul>
                 </div>
             </div>
             <div class="experience">
-                <img src="/api/placeholder/50/50" alt="Company Logo" class="experience-logo">
+                <img src="/api/placeholder/50/50" alt="Babysitter Logo" class="experience-logo">
                 <div class="experience-content">
-                    <h3 class="experience-title">Job Title</h3>
-                    <p class="experience-description">Company Name | Start Date - End Date</p>
+                    <h3 class="experience-title">Babysitter</h3>
+                    <p class="experience-description">Families, Milan and Paris | 2016 - 2024</p>
                     <ul>
-                        <li>Responsibility or achievement</li>
-                        <li>Responsibility or achievement</li>
-                        <li>Responsibility or achievement</li>
+                        <li>Cared for babies and children aged 1 to 12 years old.</li>
+                        <li>Engaged children in developmental activities and creative games.</li>
+                        <li>Organized outdoor activities and sports.</li>
+                        <li>Involved children in cooking Italian dishes.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="experience">
+                <img src="/api/placeholder/50/50" alt="Animator Logo" class="experience-logo">
+                <div class="experience-content">
+                    <h3 class="experience-title">Children's Animator</h3>
+                    <p class="experience-description">Summer Camp, Milan | 2014 - 2019</p>
+                    <ul>
+                        <li>Worked as an animator at parish summer camp, hosting around 500 children daily.</li>
+                        <li>Organized tournaments, treasure hunts, and creative workshops.</li>
+                        <li>Planned trips and coordinated team of fellow animators.</li>
                     </ul>
                 </div>
             </div>
             
             <h2 class="section-title">Education</h2>
             <div class="education-item">
-                <img src="/api/placeholder/50/50" alt="University Logo" class="education-logo">
+                <img src="/api/placeholder/50/50" alt="LSHTM Logo" class="education-logo">
                 <div class="education-content">
-                    <h3 class="education-title">King's College London</h3>
-                    <p class="education-description">Bachelor of Science in Physics | 2024 - 2027</p>
+                    <h3 class="education-title">Master's in Public Health for Development</h3>
+                    <p class="education-description">London School of Hygiene and Tropical Medicine | 2024 - 2025</p>
                 </div>
             </div>
             <div class="education-item">
-                <img src="/api/placeholder/50/50" alt="University Logo" class="education-logo">
+                <img src="/api/placeholder/50/50" alt="San Raffaele Logo" class="education-logo">
                 <div class="education-content">
-                    <h3 class="education-title">Degree Title</h3>
-                    <p class="education-description">University Name | Start Year - End Year</p>
+                    <h3 class="education-title">Master's in Medicine and Surgery</h3>
+                    <p class="education-description">San Raffaele University, Milan | 2018 - 2024</p>
                 </div>
             </div>
             <div class="education-item">
-                <img src="/api/placeholder/50/50" alt="School Logo" class="education-logo">
+                <img src="/api/placeholder/50/50" alt="Liceo Logo" class="education-logo">
                 <div class="education-content">
                     <h3 class="education-title">High School Diploma</h3>
-                    <p class="education-description">School Name | Graduation Year</p>
+                    <p class="education-description">Liceo Classico Giosuè Carducci, Milano | 2018</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="box languages-box">
+            <h2 class="languages-title">Languages</h2>
+            <div class="languages">
+                <div class="language">
+                    <img src="/api/placeholder/200/100" alt="Italian Flag">
+                    <p class="language-level">Italian (Native)</p>
+                </div>
+                <div class="language">
+                    <img src="/api/placeholder/200/100" alt="English Flag">
+                    <p class="language-level">English (Fluent)</p>
+                </div>
+                <div class="language">
+                    <img src="/api/placeholder/200/100" alt="French Flag">
+                    <p class="language-level">French (Fluent)</p>
                 </div>
             </div>
         </div>
         
         <div class="box contacts">
-            <a href="mailto:your.email@example.com">Email</a>
-            <a href="tel:+1234567890">Phone</a>
-            <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+            <a href="mailto:noemifel99@hotmail.it">Email</a>
+            <a href="tel:+393478779695">Phone</a>
+            <a href="https://www.linkedin.com/in/noemi-felisi-09b377109" target="_blank">LinkedIn</a>
         </div>
     </div>
 </body>
